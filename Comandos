@@ -1,8 +1,30 @@
 ####### identificar puertos abeirtos #######
 nmap -sS -p- --open -min-rate 5000 -n -vvv -Pn <ip victima>  -oG allPorts  //se guarda en formato grepeable para poder extraer los puertos con extractports
+// -sS escaneo sigiloso 
+// -p- escanea todos los puertos --open 
+// -min-rate 5000 Intenta enviar al menos 5000 paquetes por segundo
+//  -n No realiza resolución DNS
+// -vvv Muestra resultados muy detallados 
+// -Pn Desactiva la detección de hosts
+
 
 ####### identificar versiones de los puertos abiertos ######
 nmap -sV -sC -p<puertos separados por ,> -n -v -Pn <ip victima> -oA scan
+// -sV deteccion de versiones
+// -sC ejecuta scripts por defecto
+// -n No realiza resolución DNS
+// -v muestra resultados detallados
+// -Pn Desactiva la detección de hosts
+
+
+####### gobuster ########
+gobuster dir -u http://example.com -w /usr/share/wordlists/dirb/common.txt -x .txt,.php -t 100 | grep -v "301"
+// dir para directorio
+//-u para la url
+// -w para pasarle el diccionario
+// -x para agregar .txt a todos los datos del diccionario
+// -t para los hilos
+// | grep -v "301" para no mostrar los status
 
 
 ####### colocarse en escucha ########
