@@ -9,7 +9,7 @@ nmap -sV -sC -p<puertos separados por ,> -n -v -Pn <ip victima> -oA scan
 nc -lvnp <puerto>
 
 
-####### abrir un servidor para transferir archivos
+####### abrir un servidor para transferir archivos ############
 python3 -m http.server <puerto>
 
 
