@@ -40,6 +40,9 @@ python3 -m http.server <puerto>
 python2 windows-exploit-suggester -u //descarga el archivo
 python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
 
+// privilegios whoami /priv
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled >>> juicipotato privilege escalation 
+
 
 ######## transferir archivos de linux a windows ###########
 //en linux abrir un servidor
