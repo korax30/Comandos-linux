@@ -41,7 +41,7 @@ python2 windows-exploit-suggester -u //descarga el archivo
 python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
 
 // privilegios whoami /priv
-SeImpersonatePrivilege        Impersonate a client after authentication Enabled >>> juicipotato privilege escalation 
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled >>> juicipotato privilege escalation (churrasco.exe para sistemas antiguos)
 
 
 ######## transferir archivos de linux a windows ###########
