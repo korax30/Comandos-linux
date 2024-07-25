@@ -65,6 +65,10 @@ permisos sudo: sudo -l
 permisos suid: find / -type f -perm -4000 -ls 2>/dev/null
 
 
+#####obtener texto de la web #########
+curl -s -X GET "url"
+
+
 ######## mejorar bash ######## 
 >script /dev/null -c bash
 crtl + z
