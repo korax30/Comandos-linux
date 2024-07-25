@@ -18,7 +18,7 @@ nmap -sV -sC -p<puertos separados por ,> -n -v -Pn <ip victima> -oA scan
 
 
 ##### scripts con nmap ######
-nmap --script "vuln and safe" -p<puerto>
+nmap --script "vuln and safe" -p<puerto> <ip victima>
 
 
 ####### gobuster ########
