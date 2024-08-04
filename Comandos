@@ -40,6 +40,7 @@ python3 -m http.server <puerto>
 
 
 ####### escalacion de privilegios en Windows (Windows-Exploit-Suggester) ###############
+//revissar version   systeminfo
 // en el windows se coloca el comando systeminfo y ese output se guarda en linux en un archivo llamado systeminfo.txt
 python2 windows-exploit-suggester -u //descarga el archivo
 python2 windows-exploit-suggester -d (archivo descargado) -i systeminfo.txt
