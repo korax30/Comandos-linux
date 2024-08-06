@@ -105,3 +105,7 @@ crtl + z
 >export TERM=xterm
 stty size //en la terminal del atacante para saber el tamaño
 stty rows <rows> columns <columns> //en la terminal de la victima para ajustar el tamaño
+
+
+########## exploit magento ############
+froghopper attack
