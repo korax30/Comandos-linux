@@ -109,6 +109,13 @@ stty rows <rows> columns <columns> //en la terminal de la victima para ajustar e
 ########## listar puertos ############
 netstat -na -p tcp
 
+########## vncviewer #########
+local: 
+sudo nano /etc/proxychains4.conf
+socks4 127.0.0.1 1080
+ssh user@host -D 1080
+sudo proxychains vncviewer <parametros> (localhost)
+
 
 ########## exploit magento ############
 froghopper attack
