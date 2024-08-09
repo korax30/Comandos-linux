@@ -106,6 +106,9 @@ crtl + z
 stty size //en la terminal del atacante para saber el tamaño
 stty rows <rows> columns <columns> //en la terminal de la victima para ajustar el tamaño
 
+########## listar puertos ############
+netstat -na -p tcp
+
 
 ########## exploit magento ############
 froghopper attack
