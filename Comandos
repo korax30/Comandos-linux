@@ -125,6 +125,7 @@ sudo proxychains vncviewer <parametros> (localhost)
 nslookup
 server ip
 ip
+(dig para saber subdominios)
 
 
 ########## exploit magento ############
