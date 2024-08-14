@@ -121,6 +121,11 @@ socks4 127.0.0.1 1080
 ssh user@host -D 1080
 sudo proxychains vncviewer <parametros> (localhost)
 
+########### dominio puerto 53 ########
+nslookup
+server ip
+ip
+
 
 ########## exploit magento ############
 froghopper attack
