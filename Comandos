@@ -88,7 +88,8 @@ ssh2jhon.py
 
 
 ####decifrar hash #####
-john -w:<ruta rockyou.txt> hash
+john -w:$<locate rockyou.txt> hash
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 
 
 ######## reverseshell msfvenom ########
