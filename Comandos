@@ -150,6 +150,9 @@ exploit
 maquina victima: shell.exe
 
 
+################## sqlmap ##################
+sqlmap -r request.txt --dbms=mysql --dump
+
 
 
 ########  windows informacion de servicios que estan corriendo ###########
