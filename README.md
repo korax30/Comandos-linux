@@ -1,48 +1,7 @@
-<a name="readme-top"></a>
-
-# Name Repository
-
-> Description.
-
-## Built With
-
-- Html
-- Css
-- JavaScript
-- Vue 
-
-
-## Live Demo (if available)
-
-[Portfolio](https://gioudi.github.io/repository)
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
---Node 
---Npm 
---Composer 
---Text editor (VsCode)
-
-### Install
-
-1. Clone the repo
+## identificar puertos abeirtos
    ```sh
-   git clone git@github.com:gioudi/repository.git
+   nmap -sS -p- --open -min-rate 5000 -n -vvv -Pn -oG allPorts
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-   ```sh
-   yarn install
-   ```
+//-oG se guarda en formato grepeable para poder extraer los puertos con extractports // -sS escaneo sigiloso // -p- escanea todos los puertos --open // -min-rate 5000 Intenta enviar al menos 5000 paquetes por segundo // -n No realiza resolución DNS // -vvv Muestra resultados muy detallados // -Pn Desactiva la detección de hosts
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Usage
-
-1.Run project
