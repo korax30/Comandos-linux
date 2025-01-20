@@ -100,7 +100,6 @@ searchsploit dirty cow
 ```
 
 ## Pasar de hexadecimal a normal
-Linux versiones anteriores 
 ```sh
 echo "486f6c61206d756e646f" | xxd -r -p
 ```
