@@ -1,4 +1,5 @@
 **identificar puertos abeirtos**
+
 nmap -sS -p- --open -min-rate 5000 -n -vvv -Pn <ip victima>  -oG allPorts  //se guarda en formato grepeable para poder extraer los puertos con extractports
 // -sS escaneo sigiloso 
 // -p- escanea todos los puertos --open 
@@ -8,7 +9,10 @@ nmap -sS -p- --open -min-rate 5000 -n -vvv -Pn <ip victima>  -oG allPorts  //se 
 // -Pn Desactiva la detección de hosts
 
 
-####### identificar versiones de los puertos abiertos ######
+
+
+**identificar versiones de los puertos abiertos**
+
 nmap -sV -sC -p<puertos separados por ,> -n -v -Pn <ip victima> -oA scan
 // -sV deteccion de versiones
 // -sC ejecuta scripts por defecto
