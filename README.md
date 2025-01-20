@@ -175,6 +175,19 @@ Subir archivo
 put archiv
 ```
 
+## Hydra
+```sh
+hydra -l <usuario> -P <diccionario> <objetivo> <servicio> <opciones específicas del servicio>
+```
+-l <usuario>: Especifica un solo nombre de usuario.\
+-L <archivo>: Especifica un archivo con una lista de usuarios.\
+-p <contraseña>: Especifica una sola contraseña.\
+-P <archivo>: Especifica un archivo con una lista de contraseñas.\
+<objetivo>: La dirección IP o dominio del objetivo.\
+<servicio>: El protocolo o servicio a atacar (por ejemplo: ssh, ftp, http-post-form, smb, etc.).\
+<opciones específicas del servicio>: Dependiendo del servicio, puedes necesitar opciones adicionales.
+
+
 
 
 
