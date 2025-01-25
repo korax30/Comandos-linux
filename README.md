@@ -187,6 +187,14 @@ hydra -l <usuario> -P <diccionario> <objetivo> <servicio> <opciones específicas
 <opciones específicas del servicio>: Dependiendo del servicio, puedes necesitar opciones adicionales.
 
 
+## wpscan
+```sh
+wpscan --url http://ip/ext -U users -P pass
+```
+
+
+
+
 
 
 
